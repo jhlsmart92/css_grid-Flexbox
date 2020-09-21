@@ -1,0 +1,63 @@
+body{
+    margin: 0;
+    font-size: 2em;
+}
+
+h1, p {
+    margin: 0;
+
+}
+.container {
+    /*margin-left: auto;
+    margin-right: auto;*/
+    background: pink; /*container 높이가 0으로 되어있어 핑크색이 보이지 않음*/
+    /*이는 자식태그의 float때문에 자식태그가 부모태그에 속하지 않은 것처럼 인식됨*/
+}
+
+/*.container:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}*/
+
+.item {
+    /*float: left; 하위 아이템 둘다 왼쪽으로 붙게됨*/
+    padding: 5%;
+}
+
+.item-a{
+    /*width: 30%;*/
+    background-color: yellow;
+
+}
+
+.item-b{
+    /*width: 50%;*/
+    background-color: yellowgreen;
+}
+
+@media screen and (min-width: 700px){
+    .container {
+        font-size: 0;
+    }
+    .item{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 1rem;
+    }
+
+    .item-a {
+        width: 30%
+    }
+    .item-b {
+        width: 50%
+    }
+}
+
+
+/*footer {
+    clear: both; /*float의 영향을 없애기 위함
+    background: gray;
+}*/
